@@ -67,7 +67,8 @@ class NoteListActivity : AppCompatActivity() {
     }
 
     private fun addNote(note: Note, onResult: (APIResult?) -> Unit){
-        val call = RetrofitInitializer().noteService().addNote(note.title, note.description)
+        //val call = RetrofitInitializer().noteService().addNote(note.title, note.description)
+        val call = RetrofitInitializer().noteService().addNote(note)
         call.enqueue(
             object : Callback<APIResult> {
                 override fun onFailure(call: Call<APIResult>, t: Throwable) {

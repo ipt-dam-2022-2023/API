@@ -11,9 +11,11 @@ class RetrofitInitializer {
     private val gson:Gson = GsonBuilder().setLenient().create()
 
     private val retrofit = Retrofit.Builder()
-        .baseUrl("http://10.0.2.2/")
+        //.baseUrl("http://10.0.2.2/")
+        .baseUrl("https://adamastor.ipt.pt/DAM-API/")
         .addConverterFactory(GsonConverterFactory.create(gson))
         .build()
 
     fun noteService() = retrofit.create(NoteService::class.java)
 }
+

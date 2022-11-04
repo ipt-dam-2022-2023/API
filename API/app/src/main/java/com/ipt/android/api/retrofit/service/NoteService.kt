@@ -6,10 +6,13 @@ import retrofit2.Call
 import retrofit2.http.*
 
 interface NoteService {
-    @GET("API/getNotes.php")
+    //@GET("API/getNotes.php")
+    @GET("API/notes")
     fun list(): Call<List<Note>>
 
-    @FormUrlEncoded
-    @POST("API/addNote.php")
-    fun addNote(@Field("title") title: String?, @Field("description") description: String?): Call<APIResult>
+    //@FormUrlEncoded
+    //@POST("API/addNote.php")
+    //fun addNote(@Field("title") title: String?, @Field("description") description: String?): Call<APIResult>
+    @POST("API/notes")
+    fun addNote(@Body note: Note): Call<APIResult>
 }
