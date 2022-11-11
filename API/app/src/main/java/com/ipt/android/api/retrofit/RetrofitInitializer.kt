@@ -3,7 +3,6 @@ package com.ipt.android.api.retrofit
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import com.ipt.android.api.retrofit.service.NoteService
-import okhttp3.*
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
